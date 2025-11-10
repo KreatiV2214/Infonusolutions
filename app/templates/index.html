@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+{% block content %}
+
+    <!-- section1 -->
+    <div id="section-1">
+        <div id="s1-1">
+            <img id="s1-pic" src="static\images\pic1.png" >
+            <div class="s1-p1">
+                <p>Experience the best service</p>
+            </div>
+            <div id="s1-a1">
+                <a class="s1-a1-a" href="#">Shop now</a>
+            </div>
+        </div>
+    </div>
+    <!--section 2 -->
+<div id="section-2">
+    <div class="s2-head">
+        <div class="s2-p1">Grab your offers now!!</div> 
+    </div>
+
+    <div class="container swiper">
+        <div class="card-wrapper">
+            <ul class="card-list swiper-wrapper">
+
+                {% for offerproduct in offerproducts %}
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="{{ offerproduct.image.url }}" class="card-image" alt="can't load picture">
+                        <h2 class="badge">{{ offerproduct.name }}</h2>
+                        <p class="card-title">{{ offerproduct.description }}</p>
+                        <p class="card-price">{{ offerproduct.price }}</p>
+                        <div><button class="card-button">View product</button></div>
+                    </a>
+                </li>
+                {% endfor %}
+
+            </ul>
+
+            <div class="swiper-pagination"></div> 
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- section 3 -->
+    <div id="section-3">
+        <div id="s2-head">
+            <center><p class="s2-p1">Our services</p></center>
+        </div>
+        <div id="sec3-div1">
+            <div class="sec3-service">
+                <center><div class="head">Products</div></center>
+                <p class="about-service">Smart and Digital classroom helps the modern world class more effective and colabrative. We are leading Digital class provider for teching and business meets for live interactive meetings.</p>
+            </div>
+            <div class="sec3-service">
+                <center><div class="head">Smart classrooms</div></center>
+                <p class="about-service">Smart and Digital classroom helps the modern world class more effective and colabrative. We are leading Digital class provider for teching and business meets for live interactive meetings.</p>
+            </div>
+            <div class="sec3-service">
+                <center><div class="head">Installation</div></center>
+                <p class="about-service">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse hic possimus error, repudiandae, nesciunt ratione cumque qui delectus sapiente nostrum ipsum perspiciatis aliquam? Vitae velit nulla quia accusamus commodi nostrum!</p>
+            </div>
+        </div>
+        <div id="sec3-div2">
+            <div class="other-service serve1">Repair</div>
+            <div class="other-service serve2">Testing</div>
+            <div class="other-service serve3">Support</div>
+        </div>
+    </div>
+
+    <!--Section 4 -->
+    <div id="section-4">
+        <div class="sec4-content">
+            <div id="s4-head">
+                <p class="s2-p1 sec4-head">Website design and hosting service</p>
+            </div>
+            <div class="sec4-description">
+            We design modern, responsive, and user-friendly websites that reflect the identity of your business and enhance customer engagement. Our approach ensures that every website is optimized for performance, accessibility, and secure data handling. Along with development, we provide reliable hosting solutions that guarantee high uptime, fast loading speed, and continuous technical support.
+            Our Website Solutions Include:
+            <ul>
+                <li>Custom website design and development</li>
+                <li>Responsive and mobile-friendly layouts</li>
+                <li>Domain registration and secure hosting</li>
+                <li>SEO-ready structure and performance optimization</li>
+                <li>Ongoing maintenance and content updates</li>
+            </ul>
+            We ensure your online presence remains strong, stable, and professional — at all times.
+
+            </div>
+        </div>
+        <div class="sec4-img sectionimg">
+            <img src="static\images\webpic.png" class="sec4-pic"> 
+        </div>
+    </div>
+
+    <!-- Section 5 -->
+     <div id="section-5">
+        <div id="s4-head">
+            <p class="s2-p1 sec5-head">Managed IT services and networking</p>
+        </div>
+        <div class="sec5-main">
+        <div class="sec5-img sectionimg">
+            <img src="static\images\networkpic.jpg" class="sec5-pic"> 
+        </div>
+        <div class="sec5-content">
+            <div class="sec5-description">
+            
+        Our Managed IT Services deliver smooth and secure technological operations to support your business goals. We proactively manage your IT infrastructure, identify risks, prevent downtime, and maintain network performance. Our solutions are structured to optimize workflows and enhance efficiency with minimal disruption.
+
+        Our IT Management Services Include:
+        <ul>
+            <li>End-to-end network setup and administration</li>
+            <li>Server and infrastructure management</li>
+            <li>Data backup and disaster recovery solutions</li>
+            <li>IT helpdesk and on-site support</li>
+            <li>Network security monitoring and threat prevention</li>
+        </ul>
+        We ensure your organization operates with reliability, consistency, and maximum performance.
+
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <!--Section 6-->
+    <div id="section-4">
+        <div class="sec4-content">
+            <div id="s4-head">
+                <p class="s2-p1 sec4-head">Smart security system</p>
+            </div>
+            <div class="sec4-description">
+            We implement advanced smart security solutions designed to protect your people, property, and digital assets. Our systems integrate intelligent monitoring with automation for real-time threat detection, remote access control, and efficient surveillance management.
+
+            Smart Security Offerings:
+            <ul>
+                <li>CCTV and IP Camera surveillance systems</li>
+                <li>Biometric and RFID access control</li>
+                <li>Smart alarms and intrusion detection</li>
+                <li>Video analytics and remote monitoring</li>
+                <li>Integrated security dashboards</li>
+            </ul>
+
+           Our intelligent protection systems enhance safety, provide clarity in operations, and ensure complete peace of mind.
+            </div>
+        </div>
+        <div class="sec4-img sectionimg">
+            <img src="static\images\security.webp" class="sec4-pic"> 
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/swiper.js' %}"></script>
+
+
+{% endblock %}

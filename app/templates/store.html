@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<title>Infonu-stores</title>
+<link rel="stylesheet" href="{% static 'css/store.css' %}">
+
+{% block content %}
+
+  <div class="container swiper">
+            <div class="card-wrapper">
+              <ul class="card-list swiper-wrapper">
+                {% for product in products %}
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="{{ product.image.url }}" class="card-image" alt="can't load picture">
+                        <h2 class="badge">{{ product.name }}</h2>
+                        <p class="card-title">{{ product.description }}</p>
+                        <p class="card-price">{{ product.price }}</p>
+                        <div><button class="card-button">View product</button></div>
+                    </a>
+                </li>
+                {% endfor %}
+            </div>
+    </div>
+    
+{% endblock %}

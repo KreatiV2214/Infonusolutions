@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infonu-Signup</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <link rel="Website Icon" type="jpg" href="static\images\Infonu.jpg">
+</head>
+<body>
+  <div id="main-div">
+    <div class="sec1-logo"><a href="{% url 'index' %}"><img src="static\images\slogam.png" class="sec1-img" alt=""></a></div>
+     <div class="login">
+    <div id="section1">
+    <center><p id="sect1-p">Create your account</p></center>
+    <form>
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password" required>
+
+      <button type="submit">Sign Up</button>
+    </form>
+    <a href="login.html" id="sec1-a">Already have an account? Log in</a>
+  </div>
+  </div>
+</div>
+<hr>
+<div style="color: #a09c9c;" ><center>© Copyright 2025 -Infonusolutions. All rights reserved.</center></div>
+</body>
+</html>

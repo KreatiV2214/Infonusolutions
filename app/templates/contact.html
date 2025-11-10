@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+{% block optional_section %}
+{% endblock %} 
+{% block content %}
+<div class="split-background">
+    <div class="contact-box">
+        <div id="box-sec1">
+            <div class="sec1-div">
+                <h3 class="Edu">Contact Information</h3><br>
+                Phone:+91 98406 60784 <br>
+                Email:infonusolutions@gmail.com
+            </div>
+
+            <div class="sec1-div">
+                <h3 class="Edu">Office Location</h3><br>
+                No. 9, Rajiv Gandhi Nagar 1st Street, <br>
+                Panaiyur, Sholinganallur, <br>
+                Chennai - 600 119
+            </div>
+
+            <div class="logo-div">
+                <a href="#" class="footer-image"><img src="{% static 'images/facebook.png' %}" class="f-pic"></a>
+                <a href="#" class="footer-image"><img src="{% static 'images/instagram.png' %}" class="f-pic"></a>
+                <a href="#" class="footer-image"><img src="{% static 'images/whatsapp.png' %}" class="f-pic"></a>
+            </div>
+        </div>
+
+        <div id="box-sec2">
+            <form class="form">
+                <p class="form-p1 Edu">Ask us anything</p>
+                <input class="f-input name" type="text" placeholder="First Name"> 
+                <input class="f-input name" type="text" placeholder="Last Name"> <br>
+                <input class="f-input" type="email" placeholder="Your Email"> <br>
+                <input class="f-input" type="text" placeholder="Subject">
+                <textarea name="message" id="f6-inm" rows="10" cols="10" placeholder=" Message"></textarea>
+                <div ><button class="button" type="submit">Submit</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+<hr>
+<div style="color: #a09c9c;" ><center>© Copyright 2025 -Infonusolutions. All rights reserved.</center></div>
+{% endblock %}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infonusolutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="Website Icon" type="jpg" href="images/Infonu.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@500&family=Lilita+One&display=swap" rel="stylesheet">
+    
+    <!-- linking swiperjs css -->
+     {% load static %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+
+    <div>
+        <a id="wa-lg" href="https://wa.me/919840660784"><img src="static/images/WATransplg.png"></a>
+    </div>
+
+    <!-- nav bar -->
+    <div id="header">
+        <div id="head">
+            <a href="{% url 'index' %}"><img id="head-lg" src="static\images\slogam.png" alt="logo"></a>
+        </div>
+        <div id="head1">
+            <div class="h1-s1"><a href="{% url 'Store' %}">STORES</a></div>
+            <div class="h1-s1"><a href="{% url 'index' %}#section-3">SERVICES</a></div>
+            <div class="h1-s1"><a href="{% url 'contact' %}">CONTACT US</a></div>
+            <div class="h1-s1"><a href="{% url 'login' %}">LOGIN</a></div>
+            <div class="h1-s1"><a href="{% url 'signup' %}">SIGN UP</a></div>
+        </div>
+    </div>
+
+   {% block content %}
+
+   {% endblock %}
+{% block optional_section %}
+   <!-- Footer -->
+     <div id="footer">
+        <div class="maindiv">
+            <div class="about-div">
+                <div class="footer-subhead"><img id="foot-lg" src="static\images\slogam.png"></div>
+                <div class="footer-about">
+                    Redefining the modes in providing solutions in IT related services by Assessing, Building, and strengthening, Technical and Managerial Competencies of your organization in the most effective time through our consistent improvising process system.
+                </div>
+
+            </div>
+            <div class="div">
+                <div class="footer-subhead">SERVICES</div>
+                    <a href="#" class="footer-a">Installation</a><br>
+                    <a href="#" class="footer-a">Repair</a><br>
+                    <a href="#" class="footer-a">Testing</a><br>
+                    <a href="#" class="footer-a">WebsiteDesigning</a><br>
+                    <a href="#" class="footer-a">Smart Classrooms</a><br>
+            </div>
+            <div class="div">
+                <div class="footer-subhead">PRODUCTS</div>
+                    <a href="#" class="footer-a">Billing Softwares</a><br>
+                    <a href="#" class="footer-a">Projectors and Spares</a><br>
+                    <a href="#" class="footer-a">Surviellance Systems</a><br>
+                    <a href="#" class="footer-a">Biometric Attendance</a><br>
+                    <a href="#" class="footer-a">Antivirus Softwares</a><br>
+            </div>
+            <div class="div">
+                <div class="f-div2">
+                <a href="#" class="footer-a f-main">ABOUT</a><br>
+                <a href="contact.html" class="footer-a f-main">SUPPORT</a><br>
+                </div>
+            </div>
+            <div class="div">
+                <div class="footer-subhead">WHERE TO FIND US?</div>
+                <div class="address-div">
+                    No. 9, Rajiv Gandhi Nagar 1st Street, <br>Panaiyur, Sholinganallur,<br>Chennai - 600 119 <br>
+                    <a href="#"class=" footer-a phn-num">+91 98406 60784</a>
+                </div> <br>
+                <div class="footer-subhead connectwithus">CONNECT WITH US</div>
+                <div class="logo-div">
+                <a href="#" class="footer-image"><img src="static\images\facebook.png" class="f-pic"></a>
+                <a href="#" class="footer-image"><img src="static\images\instagram.png" class="f-pic"></a>
+                <a href="#" class="footer-image"><img src="static\images\whatsapp.png" class="f-pic"></a>
+                <a href="mailto:infonusolutions@gmail.com?" class="footer-image"><img src="static\images\mail.png" class="f-pic"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+      <div id="footer-final"><center>© Copyright 2025 -Infonusolutions. All rights reserved.</center></div>
+  </body>
+</html>
+{% endblock %}
