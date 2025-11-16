@@ -30,15 +30,21 @@
         </div>
 
         <div id="box-sec2">
-            <form class="form">
+            {% if success %}
+    <p style="color: green; font-size: 18px;">{{ success }}</p>
+            {% endif %}
+
+            <form class="form" method="POST" action="">
+                {% csrf_token %}
                 <p class="form-p1 Edu">Ask us anything</p>
-                <input class="f-input name" type="text" placeholder="First Name"> 
-                <input class="f-input name" type="text" placeholder="Last Name"> <br>
-                <input class="f-input" type="email" placeholder="Your Email"> <br>
-                <input class="f-input" type="text" placeholder="Subject">
-                <textarea name="message" id="f6-inm" rows="10" cols="10" placeholder=" Message"></textarea>
-                <div ><button class="button" type="submit">Submit</button></div>
+                <input class="f-input name" name="first_name" type="text" placeholder="First Name" required> 
+                <input class="f-input name" name="last_name" type="text" placeholder="Last Name" required> <br>
+                <input class="f-input" name="email" type="email" placeholder="Your Email" required> <br>
+                <input class="f-input" name="subject" type="text" placeholder="Subject" required>
+                <textarea class="f-input" name="message" rows="10" cols="10" placeholder="Message" required></textarea>
+                <div><button class="button" type="submit">Submit</button></div>
             </form>
+
         </div>
     </div>
 </div>
