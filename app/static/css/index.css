@@ -124,6 +124,7 @@ body{
     padding: 10px;
     border-radius: 15px;
     width: 270px;
+    text-decoration: none;
 }
 .card-list .card-link .card-button{
     transition: 0.3s ease;
@@ -152,7 +153,7 @@ body{
 }
 
 .card-item a{
-    width: 350px;
+    width: 253px;
 }
 .card-item a:hover{
     border: #0c005a;
@@ -164,6 +165,17 @@ body{
   font-size: 14px;
   color: #565959;
   margin-bottom: 8px;
+}
+.card-link {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-button {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
 }
 #sec3-div1{
     display: flex;

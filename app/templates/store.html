@@ -2,7 +2,8 @@
 
 {% load static %}
 <title>Infonu-stores</title>
-<link rel="stylesheet" href="{% static 'css/store.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
 
 {% block content %}
 
@@ -11,14 +12,19 @@
               <ul class="card-list swiper-wrapper">
                 {% for product in products %}
                 <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
-                        <img src="{{ product.image.url }}" class="card-image" alt="can't load picture">
-                        <h2 class="badge">{{ product.name }}</h2>
-                        <p class="card-title">{{ product.description }}</p>
-                        <p class="card-price">{{ product.price }}</p>
-                        <div><button class="card-button">View product</button></div>
-                    </a>
-                </li>
+    <div class="card-link">
+        <img src="{{ product.image.url }}" class="card-image" alt="can't load picture">
+        <h2 class="badge">{{ product.name }}</h2>
+        <p class="card-title">{{ product.description }}</p>
+        <p class="card-price">{{ product.price }}</p>
+
+        <a href="https://wa.me/9551566406?text=Hi! I'm interested in this product!!%0AName: {{ product.name }}%0APrice: ₹{{ product.price }}%0ADescription: {{ product.description }}"
+           target="_blank"
+           class="card-button">
+            View product
+        </a>
+    </div>
+</li>
                 {% endfor %}
             </div>
     </div>

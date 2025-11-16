@@ -25,3 +25,16 @@ def login(request):
 
 def signup(request):
     return render(request, 'signup.html')
+
+def productenquire(request, product_id):
+    product = productinfo.objects.get(id=product_id)
+
+    phone = "9551566406"   # owner number
+    message = f"I want to buy: {product.name}\nPrice: {product.price}\nID: {product.id}"
+
+    context = {
+        'product': product,
+        'phone_number': phone,
+        'message': message,
+    }
+    return render(request, "store.html", context)
