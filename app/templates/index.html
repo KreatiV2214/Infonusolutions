@@ -8,12 +8,12 @@
     <!-- section1 -->
     <div id="section-1">
         <div id="s1-1">
-            <img id="s1-pic" src="static\images\pic1.png" >
+            <img id="s1-pic" src="{% static 'images/frontimg.png' %}" >
             <div class="s1-p1">
                 <p>Experience the best service</p>
             </div>
             <div id="s1-a1">
-                <a class="s1-a1-a" href="#">Shop now</a>
+                <a class="s1-a1-a" href="{% url 'Store' %}">Shop now</a>
             </div>
         </div>
     </div>
@@ -96,7 +96,7 @@
             </div>
         </div>
         <div class="sec4-img sectionimg">
-            <img src="static\images\webpic.png" class="sec4-pic"> 
+            <img src="{% static 'images/webpic.png' %}" class="sec4-pic"> 
         </div>
     </div>
 
@@ -107,7 +107,7 @@
         </div>
         <div class="sec5-main">
         <div class="sec5-img sectionimg">
-            <img src="static\images\networkpic.jpg" class="sec5-pic"> 
+            <img src="{% static 'images/networkpic.jpg' %}" class="sec5-pic"> 
         </div>
         <div class="sec5-content">
             <div class="sec5-description">
@@ -151,7 +151,7 @@
             </div>
         </div>
         <div class="sec4-img sectionimg">
-            <img src="static\images\security.webp" class="sec4-pic"> 
+            <img src="{% static 'images/security.webp' %}" class="sec4-pic"> 
         </div>
     </div>
 

@@ -7,15 +7,17 @@
     <div class="sec1-logo"><a href="{% url 'index' %}"><img src="static\images\slogam.png" class="sec1-img" alt=""></a></div>
     <div id="section1">
     <center><p id="sect1-p">Log in</p></center>
-    <form>
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
+    <form method="POST">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
 
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
 
-      <button type="submit">Login</button>
+    <button type="submit">Login</button>
     </form>
+
     <a href="#" id="sec1-a">Forgot your password?</a>
     <div class="signup"><p class="signup-p">Don't have an account?<a href="{% url 'signup' %}" class="signup-a">Create one</a></p></div>
   </div>

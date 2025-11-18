@@ -1,6 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import productinfo, offerinfo
 from django.core.mail import send_mail
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 
 
 # Create your views here.
@@ -19,10 +22,10 @@ def Store(request):
     
     return render(request, 'store.html', context)
 
-def login(request):
+def login_page(request):
     return render(request, 'login.html')
 
-def signup(request):
+def signup_page(request):
     return render(request, 'signup.html')
 
 def productenquire(request, product_id):
@@ -67,3 +70,37 @@ def contact(request):
         })
 
     return render(request, "contact.html")
+
+# def signup_page(request):
+#     if request.method == "POST":
+#         username = request.POST.get("username")
+#         email = request.POST.get("email")
+#         password = request.POST.get("password")
+
+#         if User.objects.filter(username=username).exists():
+#             messages.error(request, "Username already exists!")
+#             return redirect('signup')
+
+#         user = User.objects.create_user(username=username, email=email, password=password)
+#         user.save()
+
+#         messages.success(request, "Account created successfully! Please log in.")
+#         return redirect('login')
+
+#     return render(request, "signup.html")
+
+# def login_page(request):
+#     if request.method == "POST":
+#         username = request.POST.get("username")
+#         password = request.POST.get("password")
+
+#         user = authenticate(request, username=username, password=password)
+
+#         if user is not None:
+#             login(request, user)
+#             return redirect('index')  # redirect to home page
+#         else:
+#             messages.error(request, "Invalid username or password.")
+#             return redirect('login')
+
+#     return render(request, "login.html")

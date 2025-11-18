@@ -22,13 +22,13 @@
 <body>
 
     <div>
-        <a id="wa-lg" href="https://wa.me/919840660784"><img src="static/images/WATransplg.png"></a>
+        <a id="wa-lg" href="https://wa.me/919840660784"><img src="{% static 'images/WATransplg.png' %}"></a>
     </div>
 
     <!-- nav bar -->
     <div id="header">
         <div id="head">
-            <a href="{% url 'index' %}"><img id="head-lg" src="static\images\slogam.png" alt="logo"></a>
+            <a href="{% url 'index' %}"><img id="head-lg" src="{% static 'images/slogam.png' %}" alt="logo"></a>
         </div>
         <div id="head1">
             <div class="h1-s1"><a href="{% url 'Store' %}">STORES</a></div>
@@ -47,7 +47,7 @@
      <div id="footer">
         <div class="maindiv">
             <div class="about-div">
-                <div class="footer-subhead"><img id="foot-lg" src="static\images\slogam.png"></div>
+                <div class="footer-subhead"><img id="foot-lg" src="{% static 'images/slogam.png' %}"></div>
                 <div class="footer-about">
                     Redefining the modes in providing solutions in IT related services by Assessing, Building, and strengthening, Technical and Managerial Competencies of your organization in the most effective time through our consistent improvising process system.
                 </div>
@@ -55,24 +55,24 @@
             </div>
             <div class="div">
                 <div class="footer-subhead">SERVICES</div>
-                    <a href="#" class="footer-a">Installation</a><br>
-                    <a href="#" class="footer-a">Repair</a><br>
-                    <a href="#" class="footer-a">Testing</a><br>
-                    <a href="#" class="footer-a">WebsiteDesigning</a><br>
-                    <a href="#" class="footer-a">Smart Classrooms</a><br>
+                    <div class="footer-a">Installation</div>
+                    <div class="footer-a">Repair</div>
+                    <div class="footer-a">Testing</div>
+                    <div class="footer-a">WebsiteDesigning</div>
+                    <div class="footer-a">Smart Classrooms</div>
             </div>
             <div class="div">
                 <div class="footer-subhead">PRODUCTS</div>
-                    <a href="#" class="footer-a">Billing Softwares</a><br>
-                    <a href="#" class="footer-a">Projectors and Spares</a><br>
-                    <a href="#" class="footer-a">Surviellance Systems</a><br>
-                    <a href="#" class="footer-a">Biometric Attendance</a><br>
-                    <a href="#" class="footer-a">Antivirus Softwares</a><br>
+                    <div class="footer-a">Billing Softwares</div>
+                    <div class="footer-a">Projectors and Spares</div>
+                    <div class="footer-a">Surviellance Systems</div>
+                    <div class="footer-a">Biometric Attendance</div>
+                    <div class="footer-a">Antivirus Softwares</div>
             </div>
             <div class="div">
                 <div class="f-div2">
-                <a href="#" class="footer-a f-main">ABOUT</a><br>
-                <a href="contact.html" class="footer-a f-main">SUPPORT</a><br>
+                <a href="{% url 'index' %}#section-3" class="footer-a f-main">ABOUT</a><br>
+                <a href="{% url 'contact' %}" class="footer-a f-main">SUPPORT</a><br>
                 </div>
             </div>
             <div class="div">
@@ -83,10 +83,10 @@
                 </div> <br>
                 <div class="footer-subhead connectwithus">CONNECT WITH US</div>
                 <div class="logo-div">
-                <a href="#" class="footer-image"><img src="static\images\facebook.png" class="f-pic"></a>
-                <a href="#" class="footer-image"><img src="static\images\instagram.png" class="f-pic"></a>
-                <a href="#" class="footer-image"><img src="static\images\whatsapp.png" class="f-pic"></a>
-                <a href="mailto:infonusolutions@gmail.com?" class="footer-image"><img src="static\images\mail.png" class="f-pic"></a>
+                <a href="#" class="footer-image"><img src="{% static 'images/facebook.png' %}" class="f-pic"></a>
+                <a href="#" class="footer-image"><img src="{% static 'images/instagram.png' %}" class="f-pic"></a>
+                <a href="#" class="footer-image"><img src="{% static 'images/whatsapp.png' %}" class="f-pic"></a>
+                <a href="mailto:kreativ2214@gmail.com?" class="footer-image"><img src="{% static 'images/mail.png' %}" class="f-pic"></a>
                 </div>
             </div>
         </div>
