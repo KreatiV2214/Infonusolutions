@@ -1,32 +1,31 @@
 {% extends 'base.html' %}
-
 {% load static %}
-<title>Infonu-stores</title>
 
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/store.css' %}">
 
 {% block content %}
 
-  <div class="container swiper">
-            <div class="card-wrapper">
-              <ul class="card-list swiper-wrapper">
-                {% for product in products %}
-                <li class="card-item swiper-slide">
-    <div class="card-link">
-        <img src="{{ product.image.url }}" class="card-image" alt="can't load picture">
-        <h2 class="badge">{{ product.name }}</h2>
-        <p class="card-title">{{ product.description }}</p>
-        <p class="card-price">{{ product.price }}</p>
+<div class="product-grid">
 
-        <a href="https://wa.me/9551566406?text=Hi! I'm interested in this product!!%0AName: {{ product.name }}%0APrice: ₹{{ product.price }}%0ADescription: {{ product.description }}"
-           target="_blank"
-           class="card-button">
-            View product
-        </a>
+    {% for product in products %}
+    <div class="card">
+
+        <img src="{{ product.image.url }}" class="card-img" alt="{{ product.name }}">
+
+        <div class="card-body">
+            <h2 class="card-title">{{ product.name }}</h2>
+            <p class="card-desc">{{ product.description }}</p>
+            <p class="card-price">₹{{ product.price }}</p>
+
+            <a href="https://wa.me/9551566406?text=Hi! I'm interested in this product!!%0AName: {{ product.name }}%0APrice: ₹{{ product.price }}%0ADescription: {{ product.description }}"
+               target="_blank">
+                <button class="card-btn">View product</button>
+            </a>
+        </div>
+
     </div>
-</li>
-                {% endfor %}
-            </div>
-    </div>
-    
+    {% endfor %}
+</div>
+
 {% endblock %}

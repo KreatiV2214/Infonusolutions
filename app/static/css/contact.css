@@ -120,13 +120,13 @@ hr{
 #head-lg {
     width: 124px;
 }
-.h1-s1 a{
-    padding: 8px;
-        font-size: 14px;
+.h1-s1 a {
+    font-size: 9px;
 }
-#head1{
-    padding-left: 0;
-}
+    #head1 {
+        padding-left: 15px;
+        padding-top: 5px;
+    }
 #head {
     padding-left: 10px;
 }
