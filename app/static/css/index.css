@@ -223,7 +223,7 @@ body{
 .sec4-description{
     /* margin: 50px 10px 10px 10px; */
     text-align: justify;
-    font-size: 20px; 
+    font-size: 18px; 
 }
 .sec4-img{
     margin: 30px; 
@@ -238,7 +238,7 @@ height: 400px;
 }
 .sec5-description{
     text-align: justify;
-    font-size: 20px; 
+    font-size: 18px; 
     /* padding-right: 50px; */
 }
 .sec5-pic{
@@ -252,8 +252,7 @@ height: 400px;
     margin: 20px;
 }
 .sec5-head{
-    padding-left: 530px;
-    margin-bottom: 0px;
+    margin: 10px;
 }
 #footer{
     background: #0c005a;
