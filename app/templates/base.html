@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link rel="stylesheet" href="{% static 'css/store.css' %}">
+    <link rel="stylesheet" href="{% static 'css/product_detail.css' %}">
+
     {% block head %}{% endblock %}
 </head>
 <body>
@@ -32,11 +34,24 @@
             <a href="{% url 'index' %}"><img id="head-lg" src="{% static 'images/slogam.png' %}" alt="logo"></a>
         </div>
         <div id="head1">
-            <div class="h1-s1"><a href="{% url 'Store' %}">STORES</a></div>
+            <div class="h1-s1 dropdown">
+            <a href="{% url 'Store' %}" class="nav-link">STORES ▾</a>
+
+            <div class="dropdown-menu">
+                <!-- All products -->
+                <a href="{% url 'Store' %}" class="dropdown-item">All</a>
+
+                <!-- Category list -->
+                {% for cat in categories %}
+                    <a href="{% url 'Store' %}?category={{ cat.slug }}"
+                       class="dropdown-item">
+                        {{ cat.name }}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
             <div class="h1-s1"><a href="{% url 'index' %}#section-3">SERVICES</a></div>
             <div class="h1-s1"><a href="{% url 'contact' %}">CONTACT US</a></div>
-            <div class="h1-s1"><a href="{% url 'login' %}">LOGIN</a></div>
-            <div class="h1-s1"><a href="{% url 'signup' %}">SIGN UP</a></div>
         </div>
     </div>
 
