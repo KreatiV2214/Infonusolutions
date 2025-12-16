@@ -61,10 +61,6 @@
     transition: 0.2s ease;
 }
 
-/* .detail-btn:hover {
-    background: #02008d;
-} */
-
 
 @media (max-width: 768px) {
     .product-detail {
