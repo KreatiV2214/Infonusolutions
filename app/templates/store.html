@@ -6,43 +6,36 @@
 
 {% block content %}
 
-  <div class="category-strip">
-        
-        <a href="{% url 'Store' %}"
-           class="cat-link {% if not request.GET.category %}active{% endif %}">
-            All
-        </a>
-        {% for category in categories %}
-            <a href="?category={{ category.slug }}"
-               class="cat-link {% if request.GET.category == category.slug %}active{% endif %}">
-                {{ category.name }}
-            </a>
-        {% endfor %}
-    </div>
+<div class="category-strip">
+    <a href="{% url 'Store' %}"
+    class="cat-link {% if not request.GET.category %}active{% endif %}">
+    All
+    </a>
+    {% for category in categories %}
+    <a href="?category={{ category.slug }}"
+    class="cat-link {% if request.GET.category == category.slug %}active{% endif %}">
+    {{ category.name }}
+    </a>
+    {% endfor %}
+</div>
 
 <div class="product-grid">
 
     {% for product in products %}
     <div class="card">
-
         <img src="{{ product.image.url }}" class="card-img" alt="{{ product.name }}">
-
         <div class="card-body">
-             <h2 class="card-title">
-    {{ product.name|truncatechars:30 }}
-</h2>
+            <h2 class="card-title">
+                {{ product.name|truncatechars:30 }}
+            </h2>
             <p class="card-desc">
-        {{ product.description|truncatechars:130 }}
-
-</p>
+                {{ product.description|truncatechars:130 }}
+            </p>
             <p class="card-price">₹{{ product.price }}</p>
-
             <a href="{% url 'product_detail' product.id %}">
-    <button class="card-btn">View product</button>
-</a>
-
+                <button class="card-btn">View product</button>
+            </a>
         </div>
-
     </div>
     {% endfor %}
 </div>

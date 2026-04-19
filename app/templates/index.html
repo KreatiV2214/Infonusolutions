@@ -2,6 +2,7 @@
 
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/store.css' %}">
 
 {% block content %}
 
@@ -27,7 +28,7 @@
         <div class="card-wrapper">
             <ul class="card-list swiper-wrapper">
 
-                {% for offerproduct in offerproducts %}
+                <!-- {% for offerproduct in offerproducts %}
                 <li class="card-item swiper-slide">
                     <a href="#" class="card-link">
                         <img src="{{ offerproduct.image.url }}" class="card-image" alt="can't load picture">
@@ -37,8 +38,27 @@
                         <div><button class="card-button">View product</button></div>
                     </a>
                 </li>
-                {% endfor %}
+                {% endfor %} -->
 
+
+                {% for offerproduct in offerproducts %}
+                <li class="card swiper-slide">
+                    <img src="{{ offerproduct.image.url }}" class="card-img" alt="">
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            {{ offerproduct.name|truncatechars:30 }}
+                        </h2>
+                        <p class="card-desc">
+                            {{ offerproduct.description|truncatechars:130 }}
+                        </p>
+                        <p class="card-price">₹{{ offerproduct.price }}</p>
+                        <a href="{% url 'product_detail' offerproduct.id %}">
+                            <button class="card-btn">View product</button>
+                        </a>
+                        <!-- <button class="card-btn">View product</button> -->
+                    </div>
+                </li>
+                {% endfor %}
             </ul>
 
             <div class="swiper-pagination"></div> 
@@ -162,3 +182,20 @@
 
 
 {% endblock %}
+
+
+<!-- <div class="card">
+                        <img src="{{ offerproduct.image.url }}" class="card-img" alt="{{ offerproduct.name }}">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                {{ offerproduct.name|truncatechars:30 }}
+                            </h2>
+                            <p class="card-desc">
+                                {{ offerproduct.description|truncatechars:130 }}
+                            </p>
+                            <p class="card-price">₹{{ offerproduct.price }}</p>
+                            <a href="{% url 'product_detail' product.id %}">
+                                <button class="card-btn">View product</button>
+                            </a>
+                        </div>
+                    </div> -->
